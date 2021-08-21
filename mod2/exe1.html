@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head><title>Exercise 1</title></head>
+    <head><title>Exercise 1</title>
+    <!-- document style -->
+    <style>
+        input, fieldset{
+            margin-bottom: 10px;
+        }
+        .flex-container{
+            display: flex;
+        }
+        .flex-container > label{
+            width: 25%;
+        }
+    </style>
+    </head>
     <body>
         <form action="">
-
-            <table>
-                <tr>
-                    <fieldset>
-                        <legend>
-                            Basic customer details
-                        </legend>
-                        <label for="companyName">Company Name:</label>
-                        <input type="text" name="companyName" id="companyName"
-                            placeholder="Enter company name"> <br/>
-                        <label for="contactNo">Contact no.:</label>
-                        <input type="tel" name="contactNo" id="contactNo" placeholder="Enter tel.no"><br/>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="Enter email address"> <br/>
-                    </fieldset>
-                </tr>
-                <tr>
-                    <fieldset>
-                        <legend>
-                            Customer login credential
-                        </legend>
-                        <label for="username">Username:</label>
-                        <input type="text" name="username" id="username" placeholder="Enter username"> <br/>
-                        <label for="password">Password:</label>
-                        <input type="password" name="password" id="password" placeholder="Enter password">
-                    </fieldset>
-                </tr>
-                <tr>
-                    <input type="submit" name="submit" value="Submit">
-                    <input type="reset" value="Reset">
-                </tr>
-            </table>
-
+            <fieldset>
+                <legend>
+                    Basic customer details
+                </legend>
+                <div class="flex-container">
+                    <label for="companyName">Company Name:</label>
+                    <input type="text" name="companyName" id="companyName"
+                    placeholder="Enter company name"> <br/>    
+                </div>
+                <div class="flex-container">
+                    <label for="contactNo">Contact no.:</label>
+                    <input type="tel" name="contactNo" id="contactNo" placeholder="Enter tel.no">
+                </div>
+                <div class="flex-container">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email address">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Customer login credential
+                </legend>
+                <div class="flex-container">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username">
+                </div>
+                <div class="flex-container">
+                    <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter password">
+                </div>
+            </fieldset>
+            <!-- inline style -->
+            <div style="text-align: right;">
+                <input type="submit" name="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
         </form>
     </body>
 </html>
