@@ -1,0 +1,1 @@
+alert( 'messgage box from external file.' );
