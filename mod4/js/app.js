@@ -1,7 +1,17 @@
+// task: compute area
 function calcAreaOfCircle( radius, show ){
     //formula : A=π * r * r
     // alert( radius );
-    let result = Math.PI * radius * radius;
-    show( result );
-    //document.getElementById('result').textContent = result;
+    try{
+        if( radius < 0 ){
+            throw "negative value"; //gen new exception error
+        }else{
+            let result = Math.PI * Math.pow( radius, 2 );
+            show( result );
+        }
+    }catch(err){
+        console.log( err );
+    }
+    
+    
 }
