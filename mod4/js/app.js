@@ -11,7 +11,8 @@ function calcAreaOfCircle( radius, show ){
         }
     }catch(err){
         console.log( err );
+        show( err );
+        
     }
-    
     
 }
